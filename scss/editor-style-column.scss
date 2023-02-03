@@ -1,0 +1,54 @@
+@charset 'utf-8';
+
+//設定ファイル（変数）
+@import 'setting/config';
+@import 'setting/function';
+
+//関数ファイル（MIXINなど）
+@import 'setting/menu-config';
+
+@import 'page/column';
+
+//エディタ用
+html {
+    font-size: 10px;
+}
+body {
+    .editor-styles-wrapper {
+        .editor-post-title__input {
+            @extend %column-title;
+        }
+
+        h2 {
+            @extend %column-h2;
+        }
+
+        h3 {
+            @extend %column-h3;
+        }
+
+        h4 {
+            @extend %column-h4;
+        }
+
+        h5 {
+            @extend %column-h5;
+        }
+
+        p {
+            @extend %column-p;
+        }
+
+        img {
+            @extend %column-img;
+        }
+
+        ul {
+            @extend %column-ul;
+        }
+
+        ol {
+            @extend %column-ul;
+        }
+    }
+}

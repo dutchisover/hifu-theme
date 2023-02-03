@@ -1,0 +1,192 @@
+.wp-block-table td, .wp-block-table th {
+    border: 0;
+}
+
+.price {
+    position: relative;
+    z-index: 4;
+    margin-top: $margin-section / 3;
+
+    &_title {
+        padding-bottom: 1em;
+        text-align: left;
+
+        &-sub {
+            padding: .75em 0;
+            font-family: $font-family-mincho;
+            font-size: 3.2rem;
+            font-weight: bold;
+            text-align: center;
+            color: $color-khaki;
+            background-image: url(../image/price_bg_ttl.png);
+            background-repeat: no-repeat;
+            background-position: center;
+
+            @include mq() {
+                width: 90vw;
+                margin-left: calc(50% - 50vw);
+                font-size: $font-size-title-sub-sp;
+                background-size: 200%;
+            }
+        }
+    }
+
+    &_beginner {
+        display: flex;
+        flex-wrap: wrap;
+        width: 70%;
+
+        @include mq() {
+            width: 90%;
+        }
+
+        dl {
+            width: 50%;
+            margin-bottom: $margin-section * .25;
+        }
+
+        dt {
+            font-size: $font-size-default * 1.25;
+        }
+
+        dd {
+            font-size: $font-size-default * 1.75;
+
+            span {
+                font-size: .7em;
+
+                @include mq() {
+                    display: block;
+                    font-size: .5em;
+                }
+            }
+        }
+    }
+
+    &_mv {
+        width: 100vw;
+        max-width: none;
+        margin-left: calc((100% - 100vw) / 2);
+        background-color: #f6f8f5;
+        box-shadow: 0 0 40px rgba(0, 0, 0, .05);
+
+        &_pic {
+            position: relative;
+            width: 90%;
+            max-width: $width_base;
+            margin: auto;
+        }
+
+        &_list {
+            //position: absolute;
+            bottom: 1em;
+            left: 0;
+            width: 70%;
+            margin-bottom: $margin-section;
+            list-style: none;
+            font-size: 1.4rem;
+
+            @include mq() {
+                position: relative;
+                width: 90%;
+                margin-top: 1em;
+            }
+        }
+
+        &_item {
+            font-size: inherit;
+        }
+
+        &_link {
+            text-decoration: underline;
+            color: inherit;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    &_payment {
+        margin-top: $margin-section / 2;
+
+        &_container {
+            display: flex;
+            justify-content: space-between;
+            width: 60%;
+            margin: auto;
+
+            @include mq() {
+                width: 100%;
+            }
+        }
+
+        &_box {
+            width: 32%;
+            margin-bottom: $margin-section / 2;
+            padding: 0%;
+            font-size: 2.8rem;
+            font-weight: $font-weight-bold;
+            line-height: 1.6;
+            text-align: center;
+            border: 2px solid #ccc;
+
+            @include mq() {
+                margin: 1em 0 2em;
+                font-size: $font-size-default-sp;
+            }
+        }
+
+        &_pic {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &_list {
+            list-style: none;
+
+            @include mq() {
+                font-size: $font-size-small-sp;
+            }
+        }
+
+        &_loan {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: $margin-section / 4;
+        }
+
+        &_button {
+            padding: .5em 2em;
+            font-size: 2.8rem;
+            font-weight: $font-weight-bold;
+            transition: $anime-default;
+            color: $color-white;
+            border-radius: 20px;
+            background-color: $background-color-red;
+
+            @include mq() {
+                font-size: $font-size-title-sub-sp;
+                border-radius: 10px;
+            }
+
+            &:hover {
+                opacity: .8;
+            }
+        }
+    }
+}
+
+h3 + .price_menuback, h4 + .price_menuback {
+    display: none;
+}
+
+.wp-block-image + .price_menuback {
+    display: none;
+}
+
+@import '../module/table';

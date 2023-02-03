@@ -1,0 +1,447 @@
+@charset "UTF-8";
+body h3, .price_catalog h3 {
+  margin: 9.6rem auto 2em;
+  padding: 0;
+  font-size: 2.6rem;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  background-color: #b59159;
+}
+
+body h4, .price_catalog h4 {
+  position: relative;
+  margin-top: 1.3em;
+  margin-bottom: 1em;
+  padding-bottom: 0.5em;
+  font-size: 4rem;
+  font-weight: 500;
+  text-align: center;
+}
+body h4::after, .price_catalog h4::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 1em;
+  margin: auto;
+  content: "";
+  border-bottom: 3px solid #e5d9c5;
+}
+body h4 em, .price_catalog h4 em {
+  display: inline-block;
+  font-size: 1.6rem;
+  font-style: normal;
+  line-height: 1.4;
+  vertical-align: middle;
+}
+
+body h5, .price_catalog h5 {
+  position: relative;
+  width: 860px;
+  margin: 1em auto 1.5em;
+  font-size: 2.4rem;
+  font-weight: bold;
+  text-align: left;
+  background-image: url(../image/cap_bg.png);
+  background-repeat: no-repeat;
+  background-position: 14em center;
+}
+@media screen and (max-width: 768px) {
+  body h5, .price_catalog h5 {
+    width: 100%;
+  }
+}
+body h5.has-text-align-center, .price_catalog h5.has-text-align-center {
+  text-align: center;
+  background-image: none;
+}
+
+body h6, .price_catalog h6 {
+  width: 860px;
+  margin: auto;
+  padding: 0.3em 0;
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+  background-color: #e5d9c5;
+}
+@media screen and (max-width: 768px) {
+  body h6, .price_catalog h6 {
+    width: 100%;
+  }
+}
+body h6 em, .price_catalog h6 em {
+  font-size: 0.6em;
+  font-style: normal;
+}
+
+body p.has-text-align-center, .price_catalog p.has-text-align-center {
+  display: block;
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: normal;
+  line-height: 1.4;
+  text-align: center;
+}
+body p.has-text-align-center strong, .price_catalog p.has-text-align-center strong {
+  display: block;
+  margin: 0;
+  font-size: 2.8rem;
+  font-weight: normal;
+  text-align: center;
+}
+
+body .wp-block-table, .price_catalog .wp-block-table {
+  width: 860px;
+  margin: auto;
+}
+@media screen and (max-width: 768px) {
+  body .wp-block-table, .price_catalog .wp-block-table {
+    overflow-x: scroll;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+  }
+}
+body .wp-block-table table, .price_catalog .wp-block-table table {
+  border: 2px solid #e5d9c5;
+}
+body .wp-block-table .many, .price_catalog .wp-block-table .many {
+  background-color: #ffe7e7 !important;
+}
+body .wp-block-table .many-60, .price_catalog .wp-block-table .many-60 {
+  background-color: #e6faf9 !important;
+}
+body .wp-block-table .many-50, .price_catalog .wp-block-table .many-50 {
+  background-color: #ffe7e7 !important;
+}
+body .wp-block-table .many-48, .price_catalog .wp-block-table .many-48 {
+  background-color: #ffe7e7 !important;
+}
+body .wp-block-table .many-36, .price_catalog .wp-block-table .many-36 {
+  background-color: #e5f6e4 !important;
+}
+body .wp-block-table .many-24, .price_catalog .wp-block-table .many-24 {
+  background-color: #f9f4d9 !important;
+}
+body .wp-block-table th, .price_catalog .wp-block-table th, body .wp-block-table td, .price_catalog .wp-block-table td {
+  padding: 0.5em;
+  font-size: 2rem;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #e5d9c5;
+}
+@media screen and (max-width: 768px) {
+  body .wp-block-table th, .price_catalog .wp-block-table th, body .wp-block-table td, .price_catalog .wp-block-table td {
+    font-size: 3.6vw;
+  }
+}
+body .wp-block-table th .trial, .price_catalog .wp-block-table th .trial, body .wp-block-table td .trial, .price_catalog .wp-block-table td .trial {
+  right: 0 !important;
+  left: 0 !important;
+  width: auto;
+  font-size: 1.6rem;
+  transform: translateX(-220%);
+  white-space: nowrap;
+  background-color: transparent !important;
+}
+@media screen and (max-width: 768px) {
+  body .wp-block-table th .trial, .price_catalog .wp-block-table th .trial, body .wp-block-table td .trial, .price_catalog .wp-block-table td .trial {
+    right: auto !important;
+    left: 0.2em !important;
+    justify-content: flex-start !important;
+    width: auto !important;
+    transform: none !important;
+  }
+}
+body .wp-block-table th.num, .price_catalog .wp-block-table th.num, body .wp-block-table td.num, .price_catalog .wp-block-table td.num {
+  padding-right: 2.5em;
+  padding-left: 2.5em;
+  font-size: 2rem;
+  font-weight: normal;
+  white-space: nowrap;
+  background-color: #f3ede4;
+}
+body .wp-block-table th.num::before, .price_catalog .wp-block-table th.num::before, body .wp-block-table td.num::before, .price_catalog .wp-block-table td.num::before {
+  content: none !important;
+}
+
+body h5 + .wp-block-table thead th, .price_catalog p.has-text-align-center + .wp-block-table thead th, .price_catalog h5 + .wp-block-table thead th, .price_catalog h4 + .wp-block-table thead th, body h6 + .wp-block-table thead th, .price_catalog h6 + .wp-block-table thead th {
+  border-right: 1px solid #fff;
+  background-color: #e5d9c5;
+}
+body h5 + .wp-block-table thead th:last-child, .price_catalog p.has-text-align-center + .wp-block-table thead th:last-child, .price_catalog h5 + .wp-block-table thead th:last-child, .price_catalog h4 + .wp-block-table thead th:last-child, body h6 + .wp-block-table thead th:last-child, .price_catalog h6 + .wp-block-table thead th:last-child {
+  font-size: 2rem;
+  font-weight: normal;
+  background-color: #e5d9c5;
+}
+body h5 + .wp-block-table thead th:last-child::before, .price_catalog p.has-text-align-center + .wp-block-table thead th:last-child::before, .price_catalog h5 + .wp-block-table thead th:last-child::before, .price_catalog h4 + .wp-block-table thead th:last-child::before, body h6 + .wp-block-table thead th:last-child::before, .price_catalog h6 + .wp-block-table thead th:last-child::before {
+  content: none !important;
+}
+body h5 + .wp-block-table thead th em, .price_catalog p.has-text-align-center + .wp-block-table thead th em, .price_catalog h5 + .wp-block-table thead th em, .price_catalog h4 + .wp-block-table thead th em, body h6 + .wp-block-table thead th em, .price_catalog h6 + .wp-block-table thead th em {
+  display: inline-block;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 1.4;
+}
+body h5 + .wp-block-table thead + tbody td, .price_catalog p.has-text-align-center + .wp-block-table thead + tbody td, .price_catalog h5 + .wp-block-table thead + tbody td, .price_catalog h4 + .wp-block-table thead + tbody td, body h6 + .wp-block-table thead + tbody td, .price_catalog h6 + .wp-block-table thead + tbody td {
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+}
+body h5 + .wp-block-table thead + tbody td em, .price_catalog p.has-text-align-center + .wp-block-table thead + tbody td em, .price_catalog h5 + .wp-block-table thead + tbody td em, .price_catalog h4 + .wp-block-table thead + tbody td em, body h6 + .wp-block-table thead + tbody td em, .price_catalog h6 + .wp-block-table thead + tbody td em {
+  white-space: nowrap;
+  background-color: none;
+}
+body h5 + .wp-block-table thead + tbody td strong, .price_catalog p.has-text-align-center + .wp-block-table thead + tbody td strong, .price_catalog h5 + .wp-block-table thead + tbody td strong, .price_catalog h4 + .wp-block-table thead + tbody td strong, body h6 + .wp-block-table thead + tbody td strong, .price_catalog h6 + .wp-block-table thead + tbody td strong {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: normal;
+  white-space: nowrap;
+}
+body h5 + .wp-block-table thead + tbody td:first-child::before, .price_catalog p.has-text-align-center + .wp-block-table thead + tbody td:first-child::before, .price_catalog h5 + .wp-block-table thead + tbody td:first-child::before, .price_catalog h4 + .wp-block-table thead + tbody td:first-child::before, body h6 + .wp-block-table thead + tbody td:first-child::before, .price_catalog h6 + .wp-block-table thead + tbody td:first-child::before {
+  content: none !important;
+}
+
+body h6 + .wp-block-table table, .price_catalog h6 + .wp-block-table table {
+  border-top: 0;
+}
+body h6 + .wp-block-table thead th, .price_catalog h6 + .wp-block-table thead th {
+  border-right: 1px solid #e5d9c5;
+  background-color: #f3ede4;
+}
+body h6 + .wp-block-table thead th:last-child, .price_catalog h6 + .wp-block-table thead th:last-child {
+  background-color: #f3ede4;
+}
+body h6 + .wp-block-table tr:first-child, .price_catalog h6 + .wp-block-table tr:first-child {
+  background-color: #f3ede4;
+}
+body h6 + .wp-block-table tr:not(:first-child) > *:first-child, .price_catalog h6 + .wp-block-table tr:not(:first-child) > *:first-child {
+  background-color: #f3ede4;
+}
+body h6 + .wp-block-table tr:not(:first-child) > *:first-child em, .price_catalog h6 + .wp-block-table tr:not(:first-child) > *:first-child em {
+  display: block;
+  font-size: 1.6rem;
+  font-style: normal;
+  line-height: 1.4;
+}
+body h6 + .wp-block-table tr > *:first-child, .price_catalog h6 + .wp-block-table tr > *:first-child {
+  width: 20%;
+}
+body h6 + .wp-block-table tr > *:not(:first-child), .price_catalog h6 + .wp-block-table tr > *:not(:first-child) {
+  width: 40%;
+}
+body h6 + .wp-block-table tr > *:not(:first-child) em, .price_catalog h6 + .wp-block-table tr > *:not(:first-child) em {
+  display: block;
+  font-size: 1.6rem;
+  font-style: normal;
+  line-height: 1.4;
+}
+body h6 + .wp-block-table th, .price_catalog h6 + .wp-block-table th, body h6 + .wp-block-table td, .price_catalog h6 + .wp-block-table td {
+  font-weight: normal;
+}
+body h6 + .wp-block-table + h6, .price_catalog h6 + .wp-block-table + h6 {
+  margin-top: 2rem;
+}
+
+body h5 + .wp-block-table th, .price_catalog p.has-text-align-center + .wp-block-table th, .price_catalog h5 + .wp-block-table th, .price_catalog h4 + .wp-block-table th, body h5 + .wp-block-table td, .price_catalog p.has-text-align-center + .wp-block-table td, .price_catalog h5 + .wp-block-table td, .price_catalog h4 + .wp-block-table td {
+  background-color: #f3ede4;
+}
+body h5 + .wp-block-table th:first-child, .price_catalog p.has-text-align-center + .wp-block-table th:first-child, .price_catalog h5 + .wp-block-table th:first-child, .price_catalog h4 + .wp-block-table th:first-child, body h5 + .wp-block-table td:first-child, .price_catalog p.has-text-align-center + .wp-block-table td:first-child, .price_catalog h5 + .wp-block-table td:first-child, .price_catalog h4 + .wp-block-table td:first-child {
+  width: 40%;
+  font-weight: 600;
+  border-bottom-color: #fff;
+  background-color: #e5d9c5;
+}
+body h5 + .wp-block-table th:first-child:empty, .price_catalog p.has-text-align-center + .wp-block-table th:first-child:empty, .price_catalog h5 + .wp-block-table th:first-child:empty, .price_catalog h4 + .wp-block-table th:first-child:empty, body h5 + .wp-block-table td:first-child:empty, .price_catalog p.has-text-align-center + .wp-block-table td:first-child:empty, .price_catalog h5 + .wp-block-table td:first-child:empty, .price_catalog h4 + .wp-block-table td:first-child:empty {
+  border: 0;
+}
+body h5 + .wp-block-table th:first-child:not(:empty), .price_catalog p.has-text-align-center + .wp-block-table th:first-child:not(:empty), .price_catalog h5 + .wp-block-table th:first-child:not(:empty), .price_catalog h4 + .wp-block-table th:first-child:not(:empty), body h5 + .wp-block-table td:first-child:not(:empty), .price_catalog p.has-text-align-center + .wp-block-table td:first-child:not(:empty), .price_catalog h5 + .wp-block-table td:first-child:not(:empty), .price_catalog h4 + .wp-block-table td:first-child:not(:empty) {
+  border-top-color: #fff;
+  border-bottom: 0;
+}
+body h5 + .wp-block-table th:first-child:not(:empty) em, .price_catalog p.has-text-align-center + .wp-block-table th:first-child:not(:empty) em, .price_catalog h5 + .wp-block-table th:first-child:not(:empty) em, .price_catalog h4 + .wp-block-table th:first-child:not(:empty) em, body h5 + .wp-block-table td:first-child:not(:empty) em, .price_catalog p.has-text-align-center + .wp-block-table td:first-child:not(:empty) em, .price_catalog h5 + .wp-block-table td:first-child:not(:empty) em, .price_catalog h4 + .wp-block-table td:first-child:not(:empty) em {
+  display: block;
+  width: 90%;
+  margin: auto;
+  font-size: 0.8em;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.4;
+}
+body h5 + .wp-block-table th:nth-child(3) em, .price_catalog p.has-text-align-center + .wp-block-table th:nth-child(3) em, .price_catalog h5 + .wp-block-table th:nth-child(3) em, .price_catalog h4 + .wp-block-table th:nth-child(3) em, body h5 + .wp-block-table td:nth-child(3) em, .price_catalog p.has-text-align-center + .wp-block-table td:nth-child(3) em, .price_catalog h5 + .wp-block-table td:nth-child(3) em, .price_catalog h4 + .wp-block-table td:nth-child(3) em {
+  left: 11%;
+}
+
+body h6 + .wp-block-table thead + tbody td, .price_catalog h6 + .wp-block-table thead + tbody td, body h6 + .wp-block-table tr:not(:first-child) > *:not(:first-child), .price_catalog h6 + .wp-block-table tr:not(:first-child) > *:not(:first-child), body h5 + .wp-block-table thead + tbody td, .price_catalog p.has-text-align-center + .wp-block-table thead + tbody td, .price_catalog h5 + .wp-block-table thead + tbody td, .price_catalog h4 + .wp-block-table thead + tbody td, body h5 + .wp-block-table th:last-child, .price_catalog p.has-text-align-center + .wp-block-table th:last-child, .price_catalog h5 + .wp-block-table th:last-child, .price_catalog h4 + .wp-block-table th:last-child, body h5 + .wp-block-table td:last-child, .price_catalog p.has-text-align-center + .wp-block-table td:last-child, .price_catalog h5 + .wp-block-table td:last-child, .price_catalog h4 + .wp-block-table td:last-child {
+  position: relative;
+  font-size: 2.4rem;
+  font-weight: 600;
+  background-color: #fff;
+}
+@media screen and (max-width: 768px) {
+  body h6 + .wp-block-table thead + tbody td, .price_catalog h6 + .wp-block-table thead + tbody td, body h6 + .wp-block-table tr:not(:first-child) > *:not(:first-child), .price_catalog h6 + .wp-block-table tr:not(:first-child) > *:not(:first-child), body h5 + .wp-block-table thead + tbody td, .price_catalog p.has-text-align-center + .wp-block-table thead + tbody td, .price_catalog h5 + .wp-block-table thead + tbody td, .price_catalog h4 + .wp-block-table thead + tbody td, body h5 + .wp-block-table th:last-child, .price_catalog p.has-text-align-center + .wp-block-table th:last-child, .price_catalog h5 + .wp-block-table th:last-child, .price_catalog h4 + .wp-block-table th:last-child, body h5 + .wp-block-table td:last-child, .price_catalog p.has-text-align-center + .wp-block-table td:last-child, .price_catalog h5 + .wp-block-table td:last-child, .price_catalog h4 + .wp-block-table td:last-child {
+    font-size: 4.6vw;
+    text-indent: 1em;
+  }
+}
+body h6 + .wp-block-table thead + tbody td:empty::before, .price_catalog h6 + .wp-block-table thead + tbody td:empty::before, body h6 + .wp-block-table tr:not(:first-child) > :empty:not(:first-child)::before, .price_catalog h6 + .wp-block-table tr:not(:first-child) > :empty:not(:first-child)::before, body h5 + .wp-block-table thead + tbody td:empty::before, .price_catalog p.has-text-align-center + .wp-block-table thead + tbody td:empty::before, .price_catalog h5 + .wp-block-table thead + tbody td:empty::before, .price_catalog h4 + .wp-block-table thead + tbody td:empty::before, body h5 + .wp-block-table th:empty:last-child::before, .price_catalog p.has-text-align-center + .wp-block-table th:empty:last-child::before, .price_catalog h5 + .wp-block-table th:empty:last-child::before, .price_catalog h4 + .wp-block-table th:empty:last-child::before, body h5 + .wp-block-table td:empty:last-child::before, .price_catalog p.has-text-align-center + .wp-block-table td:empty:last-child::before, .price_catalog h5 + .wp-block-table td:empty:last-child::before, .price_catalog h4 + .wp-block-table td:empty:last-child::before {
+  content: "-";
+}
+body h6 + .wp-block-table thead + tbody td:not(:empty)::before, .price_catalog h6 + .wp-block-table thead + tbody td:not(:empty)::before, body h6 + .wp-block-table tr:not(:first-child) > :not(:empty):not(:first-child)::before, .price_catalog h6 + .wp-block-table tr:not(:first-child) > :not(:empty):not(:first-child)::before, body h5 + .wp-block-table thead + tbody td:not(:empty)::before, .price_catalog p.has-text-align-center + .wp-block-table thead + tbody td:not(:empty)::before, .price_catalog h5 + .wp-block-table thead + tbody td:not(:empty)::before, .price_catalog h4 + .wp-block-table thead + tbody td:not(:empty)::before, body h5 + .wp-block-table th:not(:empty):last-child::before, .price_catalog p.has-text-align-center + .wp-block-table th:not(:empty):last-child::before, .price_catalog h5 + .wp-block-table th:not(:empty):last-child::before, .price_catalog h4 + .wp-block-table th:not(:empty):last-child::before, body h5 + .wp-block-table td:not(:empty):last-child::before, .price_catalog p.has-text-align-center + .wp-block-table td:not(:empty):last-child::before, .price_catalog h5 + .wp-block-table td:not(:empty):last-child::before, .price_catalog h4 + .wp-block-table td:not(:empty):last-child::before {
+  content: "￥";
+}
+body h6 + .wp-block-table thead + tbody td em, .price_catalog h6 + .wp-block-table thead + tbody td em, body h6 + .wp-block-table tr:not(:first-child) > *:not(:first-child) em, .price_catalog h6 + .wp-block-table tr:not(:first-child) > *:not(:first-child) em, body h5 + .wp-block-table thead + tbody td em, .price_catalog p.has-text-align-center + .wp-block-table thead + tbody td em, .price_catalog h5 + .wp-block-table thead + tbody td em, .price_catalog h4 + .wp-block-table thead + tbody td em, body h5 + .wp-block-table th:last-child em, .price_catalog p.has-text-align-center + .wp-block-table th:last-child em, .price_catalog h5 + .wp-block-table th:last-child em, .price_catalog h4 + .wp-block-table th:last-child em, body h5 + .wp-block-table td:last-child em, .price_catalog p.has-text-align-center + .wp-block-table td:last-child em, .price_catalog h5 + .wp-block-table td:last-child em, .price_catalog h4 + .wp-block-table td:last-child em {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3em;
+  height: 2em;
+  margin: auto;
+  font-size: 1.6rem;
+  font-weight: normal;
+  font-weight: 600;
+  font-style: normal;
+  background-color: #ffe7e7;
+}
+@media screen and (max-width: 768px) {
+  body h6 + .wp-block-table thead + tbody td em, .price_catalog h6 + .wp-block-table thead + tbody td em, body h6 + .wp-block-table tr:not(:first-child) > *:not(:first-child) em, .price_catalog h6 + .wp-block-table tr:not(:first-child) > *:not(:first-child) em, body h5 + .wp-block-table thead + tbody td em, .price_catalog p.has-text-align-center + .wp-block-table thead + tbody td em, .price_catalog h5 + .wp-block-table thead + tbody td em, .price_catalog h4 + .wp-block-table thead + tbody td em, body h5 + .wp-block-table th:last-child em, .price_catalog p.has-text-align-center + .wp-block-table th:last-child em, .price_catalog h5 + .wp-block-table th:last-child em, .price_catalog h4 + .wp-block-table th:last-child em, body h5 + .wp-block-table td:last-child em, .price_catalog p.has-text-align-center + .wp-block-table td:last-child em, .price_catalog h5 + .wp-block-table td:last-child em, .price_catalog h4 + .wp-block-table td:last-child em {
+    left: 0.2em;
+    font-size: 0.6em;
+    text-indent: 0;
+  }
+}
+
+.price_catalog .wp-block-table + p {
+  width: 860px;
+  margin: 1.5em auto 0;
+  font-size: 1.4rem;
+  line-height: 2.4;
+}
+@media screen and (max-width: 768px) {
+  .price_catalog .wp-block-table + p {
+    width: 100%;
+    line-height: 1.7;
+  }
+}
+
+.price_auto {
+  column-count: 2;
+}
+@media screen and (max-width: 768px) {
+  .price_auto {
+    column-count: 1;
+  }
+}
+.price_autolist {
+  width: 98%;
+  column-count: 1;
+}
+.price_autolist + .price_autolist {
+  margin-top: 5rem;
+}
+.price_autolist_title {
+  width: 100%;
+  margin-bottom: 0.8em;
+  padding: 0 0 0 0.8em;
+  font-size: 2.4rem;
+  font-weight: 600;
+  background-color: #e5d9c5;
+}
+@media screen and (max-width: 768px) {
+  .price_autolist_title {
+    font-size: 4.6vw;
+  }
+}
+.price_autolist_text {
+  margin: 0px;
+  padding-left: 10px;
+  font-size: 22px;
+  line-height: 2;
+}
+@media screen and (max-width: 768px) {
+  .price_autolist_text {
+    padding: 0.25em 10px;
+    font-size: 4.6vw;
+  }
+}
+.price_autolist_text::before {
+  width: 20px;
+  height: 20px;
+  padding-right: 20px;
+  color: #b59159;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "";
+}
+.price_autolist_link {
+  font-weight: 500;
+  text-decoration: none;
+  color: #000;
+}
+.price_menuback {
+  display: block;
+  width: 860px;
+  margin: 2em auto 4em;
+  font-size: 1.6rem;
+  text-align: right;
+  text-decoration: underline;
+  color: #aa9382;
+}
+@media screen and (max-width: 768px) {
+  .price_menuback {
+    width: 100%;
+  }
+}
+.price_catalog {
+  max-width: 1022px;
+  margin: auto;
+  margin-top: 4.8rem;
+}
+@media screen and (max-width: 768px) {
+  .price_catalog h3 {
+    width: 100vw;
+    margin-bottom: 1.5em;
+    margin-left: calc(50% - 50vw);
+    font-size: 6.4vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .price_catalog h4 {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    font-size: 6.4vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .price_catalog h5 {
+    width: 100%;
+    margin-bottom: 1em;
+    font-size: 4.6vw;
+    text-align: center;
+    background: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .price_catalog h6 {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    font-size: 4.6vw;
+  }
+}
+.price_catalog p.has-text-align-center + .wp-block-table {
+  margin-top: 4.8rem;
+}
+
+html {
+  font-size: 10px;
+}
+
+body .wp-block {
+  max-width: none;
+}

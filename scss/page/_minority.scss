@@ -1,0 +1,127 @@
+.minority {
+    margin-top: $margin-section / 4;
+    &_title {
+        text-align: left;
+    }
+    //WordPress
+    .wp-block-cover {
+        @include mq() {
+            width: 100vw;
+            min-height: auto;
+            margin-left: calc(50% - 50vw);
+        }
+        .wp-block-cover__inner-container {
+            padding: 100px 0;
+
+            @include mq() {
+                width: 95%;
+                margin: auto;
+            }
+        }
+        p {
+            padding: 0 0 .5em;
+            font-family: $font-family-mincho;
+            font-size: 2.4rem;
+            font-weight: $font-weight-bold;
+            line-height: 2.2;
+            text-align: center;
+
+            @include mq() {
+                padding: 0 1em;
+                font-size: $font-size-title-sub-sp;
+            }
+            &:last-child {
+                padding-bottom: 0;
+            }
+            br {
+                display: none;
+
+                @include mq() {
+                    display: block;
+                }
+            }
+        }
+    }
+    .wp-block-columns {
+        margin-top: $margin-section;
+        padding: 5% 6% 5% 6%;
+        border: 10px solid #f1ece4;
+
+        @include mq() {
+            flex-direction: column-reverse;
+            width: 96vw;
+            margin-left: calc(50% - 48vw);
+            border: 6px solid #f1ece4;
+        }
+        .wp-block-image {
+            text-align: center;
+        }
+        .wp-block-column {
+            p {
+                margin-bottom: .5em;
+                font-size: 2.4rem;
+                color: #666;
+
+                @include mq() {
+                    font-size: 4.2vw;
+                }
+            }
+            .wp-block-button {
+                a {
+                    position: relative;
+                    padding: .5em 1em .75em;
+                    font-size: 2.8rem;
+
+                    @include mq() {
+                        font-size: 5.6vw;
+                    }
+                    &::after {
+                        position: absolute;
+                        right: 0;
+                        bottom: .25em;
+                        left: 0;
+                        display: block;
+                        width: 0;
+                        height: 0;
+                        margin: auto;
+                        content: '';
+                        border: .25em solid transparent;
+                        border-top: .25em solid #fff;
+                    }
+                }
+            }
+        }
+        &.medical_loan_box {
+            @include mq() {
+                flex-direction: column;
+            }
+            h3 {
+                margin-bottom: 1em;
+                padding-bottom: 1em;
+                font-family: $font-family-mincho;
+                font-size: 2.4rem;
+                font-weight: $font-weight-bold;
+                text-align: center;
+                color: #9a7338;
+                background: url(../image/bg_line_loan.png) no-repeat bottom center;
+                background-size: 100%;
+            }
+            p {
+                padding: 0;
+                font-size: 1.8rem;
+                line-height: 1.8;
+                em {
+                    display: inline-block;
+                    font-size: .8em;
+                    font-style: normal;
+                    line-height: 1.6;
+                }
+            }
+            .wp-block-column + .wp-block-column {
+                @include mq() {
+                    margin-top: 10vw;
+                }
+            }
+        }
+    }
+}

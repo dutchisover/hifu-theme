@@ -1,0 +1,174 @@
+.doctor {
+    margin-top: $margin-section / 2;
+    padding-bottom: $margin-section * 2;
+
+    @include mq() {
+        padding-bottom: 10vw;
+    }
+    &_nav {
+        margin-top: $margin-section;
+        &_list {
+            display: flex;
+        }
+        &_item {
+            position: relative;
+            width: 22%;
+            margin-left: 4%;
+            padding: 5px 10px 45px;
+            transition: $anime-default;
+            text-align: center;
+            border: 3px solid #d3d0d0;
+            background-color: #f3f2f0;
+            &:hover {
+                opacity: .7;
+            }
+            &:first-child {
+                margin-left: 0;
+            }
+            &::after {
+                position: absolute;
+                right: 0;
+                bottom: 15px;
+                left: 0;
+                display: block;
+                width: 1em;
+                height: 1em;
+                margin: auto;
+                content: '';
+                transform: rotate(45deg);
+                border: 1px solid;
+                border-top: 0;
+                border-left: 0;
+            }
+        }
+        &_link {
+            color: inherit;
+        }
+        &_data {
+            display: block;
+            margin: .5em 0;
+        }
+        &_name {
+            font-family: $font-family-mincho;
+            font-size: $font-size-title-sub;
+        }
+    }
+
+    &_main {
+        margin-top: $margin-section;
+
+        @include mq() {
+            margin-top: 10vw;
+        }
+    }
+
+    &_info {
+        display: flex;
+        justify-content: space-between;
+        color: #484848;
+
+        @include mq() {
+            flex-direction: column;
+        }
+        & + & {
+            margin-top: $margin-section;
+        }
+        .left {
+            width: 37%;
+
+            @include mq() {
+                // width: 100vw;
+                width: 100%;
+                height: 80vw;
+                // margin-left: calc(50% - 50vw);
+            }
+            img {
+                @include mq() {
+                    width: 100%;
+                    height: 100%;
+
+                    object-fit: cover;
+                    object-position: top;
+                }
+            }
+        }
+        .right {
+            width: 60%;
+
+            @include mq() {
+                width: 100%;
+            }
+        }
+        &_title {
+            font-family: $font-family-mincho;
+            font-size: $font-size-default * 2;
+            font-weight: normal;
+            line-height: 2;
+
+            @include mq() {
+                margin: 1em 0;
+                font-size: $font-size-title-sp;
+                text-align: center;
+            }
+        }
+        &_copy {
+            display: block;
+            font-size: .75em;
+        }
+        &_post {
+            @include mq() {
+                text-align: center;
+            }
+        }
+        &_clinic {
+            margin-bottom: 4em;
+
+            @include mq() {
+                text-align: center;
+            }
+        }
+        &_message {
+            font-size: $font-size-default * 1.1;
+            line-height: 1.9;
+            text-align: justify;
+            p + p {
+                margin-top: 1em;
+            }
+        }
+        &_career {
+            margin-top: 4em;
+            padding: 1em 2em;
+            background-color: #f0f0f0;
+            &::before {
+                display: block;
+                font-weight: $font-weight-bold;
+                content: '経歴';
+            }
+        }
+        &_list {
+            display: flex;
+            justify-content: space-between;
+            margin-top: .25em;
+            padding-left: 1em;
+
+            @include mq() {
+                flex-direction: column;
+                margin-top: 1em;
+            }
+        }
+        &_year {
+            width: 16%;
+
+            @include mq() {
+                width: 100%;
+            }
+        }
+        &_text {
+            width: 78%;
+
+            @include mq() {
+                width: 100%;
+            }
+        }
+    }
+}

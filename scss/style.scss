@@ -1,0 +1,55 @@
+@charset 'utf-8';
+
+//設定ファイル（変数）
+@import 'setting/config';
+
+//関数ファイル（MIXINなど）
+@import 'setting/function';
+
+
+
+//リセットCSS
+@import 'base/reset';
+
+//サイト共通のベースCSS
+@import 'base/base';
+
+
+
+//ヘッダー
+@import 'module/header';
+
+//グローバルナビ
+@import 'module/gNav';
+
+//フッター
+@import 'module/footer';
+
+//ボタンなど
+@import 'module/parts';
+
+//固定ページ共通
+@import 'page/page';
+
+@import 'page/style';
+
+@import 'page/menu';
+
+@import 'page/plan';
+
+@import 'page/price';
+
+@import 'page/clinic';
+
+@import 'page/minority';
+
+@import 'page/news';
+
+//コラム記事用CSS
+@import 'page/column';
+
+//医師一覧CSS
+@import 'page/doctor';
+
+//トップ専用CSS
+@import 'page/top';

@@ -1,0 +1,507 @@
+.menu-gnav-container {
+    width: 100vw;
+    margin-left: calc((100% - 100vw) / 2);
+    background-color: $background-color-grey;
+
+    @include mq(lg) {
+        position: absolute;
+        z-index: 999;
+        width: 100vw;
+        pointer-events: none;
+        background-color: transparent;
+
+        &.show {
+            pointer-events: all;
+        }
+    }
+}
+
+
+.gNav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 0;
+
+    @include mq(lg) {
+        flex-direction: column;
+    }
+
+
+    a {
+        @extend %gNav;
+    }
+
+    li {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex: 1;
+        justify-content: center;
+        background-color: $background-color-grey;
+
+        @include mq(lg) {
+            transition: .4s;
+            pointer-events: none;
+            opacity: 0;
+            //padding-left: 2em;
+            border-bottom: 1px solid #deccb0;
+
+            @include mq(lg) {
+                .show & {
+                    pointer-events: all;
+                    opacity: 1;
+                }
+            }
+        }
+
+        &::after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            display: block;
+            width: 1px;
+            height: 55%;
+            margin: auto;
+            content: '';
+            background-color: #d6d6d6;
+        }
+
+        &:last-child, &:nth-last-child(2), &:nth-last-child(3), &:nth-last-child(4) {
+            &::after {
+                content: none;
+            }
+        }
+
+        a {
+            display: block;
+            width: 100%;
+            transition: $anime-default;
+            text-align: center;
+
+            &:hover {
+                opacity: .5;
+            }
+        }
+    }
+
+    &_item {
+        &-line {
+            display: flex;
+            align-items: center;
+            opacity: 1 !important;
+            background-color: transparent !important;
+
+            @include mq(lg) {
+                position: absolute !important;
+                top: 0;
+                right: 0;
+                left: 20%;
+                display: flex !important;
+                align-items: center;
+                justify-content: space-between !important;
+                width: 37%;
+                margin: auto;
+                padding-left: 0 !important;
+                transform: translateY(-100%);
+                border-bottom: 0 !important;
+
+                a {
+                    overflow: hidden;
+                    width: 0 !important;
+                    white-space: nowrap;
+
+                    &::after {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        display: flex;
+                        align-items: center;
+                        height: 100%;
+                        font-size: 3vw;
+                        line-height: 1;
+                        content: '友達登録で初診料無料';
+                    }
+                }
+            }
+
+            &::before {
+                display: inline-block;
+                width: 2.5rem;
+                height: 2rem;
+                margin-right: 5px;
+                //font-family: 'Font Awesome 5 Brands';
+                font-size: 2.5rem;
+                //font-weight: normal;
+                //font-style: normal;
+                //font-variant: normal;
+                line-height: 1;
+                //content: '\f3c0';
+                color: #00c300;
+                //background-image: url(../image/nav_line.png);
+
+                -webkit-font-smoothing: antialiased;
+                text-rendering: auto;
+                @include fontAwesomeBrands('\f3c0');
+            }
+        }
+
+        &-reserve {
+            display: flex;
+            align-items: center;
+
+            @include mq(lg) {
+                display: block;
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                padding: .5rem 2rem;
+                color: $color-red;
+                border-radius: 100px;
+                background-color: #fff;
+
+                @include mq(lg) {
+                    display: block;
+                    padding: 1em 0;
+                    font-size: $font-size-small;
+                    font-weight: $font-weight-bold;
+                    white-space: nowrap;
+                    color: $color-black;
+                    background-color: transparent;
+                }
+
+                &::before {
+                    display: block;
+                    width: 19px;
+                    height: 12px;
+                    margin-right: 5px;
+                    content: '';
+                    background-image: url(../image/nav_mail.gif);
+
+                    @include mq(lg) {
+                        content: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.menu-item-has-children {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        top: calc(50% - .25em);
+        right: 10%;
+        display: block;
+        width: .5em;
+        height: .5em;
+        font-size: 1.4rem;
+        content: '';
+        transform: rotate(45deg) translateY(-50%);
+        border: 1px solid;
+        border-top: 0;
+        border-left: 0;
+
+        @include mq() {
+            display: none;
+        }
+    }
+}
+
+.sub-menu {
+    position: absolute;
+    z-index: 10;
+    bottom: 1px;
+    left: 0;
+    width: 100%;
+    transition: .3s;
+    transform: translateY(100%);
+    pointer-events: none;
+    opacity: 0;
+
+    @include mq() {
+        position: static;
+        transform: none;
+        pointer-events: none;
+        opacity: 1;
+
+        .show & {
+            pointer-events: all;
+        }
+    }
+
+    & > li {
+        border-top: 1px solid #d0d0d0;
+        border-bottom: 0;
+        background-color: #e7e7e7 !important;
+
+        &:first-child {
+            border-top: 0;
+        }
+    }
+}
+
+.menu-item-has-children:hover .sub-menu {
+    pointer-events: all;
+    opacity: 1;
+}
+
+.menu-hnav-container {
+    margin-left: auto;
+
+    @include mq() {
+        display: none;
+    }
+}
+
+.hNav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 0;
+
+    @include mq(lg) {
+        flex-direction: column;
+    }
+
+    .gNav_item-reserve a {
+        margin-left: 2em;
+        background-color: #f0f0f0;
+    }
+
+
+    a {
+        @extend %gNav;
+    }
+
+    li {
+        transition: $anime-default;
+
+        @include mq(lg) {
+            display: none;
+            padding-left: 2em;
+            border-bottom: 1px solid #deccb0;
+
+            @include mq(lg) {
+                .show & {
+                    display: block;
+                }
+            }
+        }
+
+        &:hover {
+            opacity: .5;
+        }
+    }
+
+    &_item {
+        &-line {
+            display: flex;
+            align-items: center;
+
+            @include mq(lg) {
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 20%;
+                display: flex !important;
+                align-items: center;
+                width: 37%;
+                margin: auto;
+                padding-left: 0 !important;
+                transform: translateY(-100%);
+                border-bottom: 0 !important;
+
+                a {
+                    overflow: hidden;
+                    width: 0;
+                    white-space: nowrap;
+
+                    &::after {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        display: flex;
+                        align-items: center;
+                        height: 100%;
+                        font-size: 3vw;
+                        line-height: 1;
+                        content: '友達登録で初診料無料';
+                    }
+                }
+            }
+
+            &::before {
+                display: inline-block;
+                width: 2.5rem;
+                height: 2rem;
+                margin-right: 5px;
+                //font-family: 'Font Awesome 5 Brands';
+                font-size: 2.5rem;
+                //font-weight: normal;
+                //font-style: normal;
+                //font-variant: normal;
+                line-height: 1;
+                //content: '\f3c0';
+                color: #00c300;
+                //background-image: url(../image/nav_line.png);
+
+                -webkit-font-smoothing: antialiased;
+                text-rendering: auto;
+                @include fontAwesomeBrands('\f3c0');
+            }
+        }
+
+        &-reserve {
+            display: flex;
+            align-items: center;
+
+            @include mq(lg) {
+                display: block;
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                padding: .5rem 2rem;
+                color: $color-red;
+                border-radius: 100px;
+                background-color: #f0f0f0;
+
+                @include mq(lg) {
+                    display: block;
+                    padding: 1em 0;
+                    font-size: $font-size-small;
+                    font-weight: $font-weight-bold;
+                    white-space: nowrap;
+                    color: $color-black;
+                    background-color: transparent;
+                }
+
+                &::before {
+                    display: block;
+                    width: 19px;
+                    height: 12px;
+                    margin-right: 5px;
+                    content: '';
+                    background-image: url(../image/nav_mail.gif);
+
+                    @include mq(lg) {
+                        content: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*ハンバーガーボタン*/
+$humberger-color: $border-color-red;
+$humberger-border: $border-color-red;
+
+.navButton {
+    position: absolute;
+    z-index: 9999;
+    right: 0%;
+    display: none;
+    width: 2em;
+    height: 2em;
+    padding: 0;
+    font-size: 1.4rem;
+    cursor: pointer;
+    -webkit-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+    text-decoration: none;
+    color: $humberger-color;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    background-color: transparent;
+
+    filter: drop-shadow(0 0 2rem transparent);
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    @include mq(lg) {
+        display: block;
+    }
+
+    &[aria-expanded='true'] + .header_title {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+.navButton:hover, .navButton:focus {
+    filter: drop-shadow(0 0 1rem rgba(0, 0, 0, .5));
+}
+
+.navButton_line {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    -webkit-transition: inherit;
+            transition: inherit;
+    white-space: nowrap;
+    text-indent: 200%;
+    border-top: $humberger-border solid;
+}
+
+.navButton:before, .navButton:after {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 0;
+    content: '';
+    -webkit-transition: inherit;
+            transition: inherit;
+    border-top: $humberger-border solid;
+}
+
+.navButton::before {
+    top: .25em;
+}
+
+.navButton::after {
+    bottom: .25em;
+}
+
+#js-navButton[aria-expanded='true'] {
+    z-index: 99999;
+}
+
+#js-navButton[aria-expanded='true'] .navButton_line {
+    border-top: 0 solid transparent;
+}
+
+#js-navButton[aria-expanded='true']::before, #js-navButton[aria-expanded='true']::after {
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    background-color: #f9d8ae;
+}
+
+#js-navButton[aria-expanded='true']::before {
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+
+#js-navButton[aria-expanded='true'] + .header_logo {
+    visibility: hidden;
+
+    @include mq(lg) {
+        visibility: visible;
+    }
+}

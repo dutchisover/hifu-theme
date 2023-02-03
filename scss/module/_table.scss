@@ -1,0 +1,283 @@
+.price {
+    //JavaScript自動目次リスト
+    &_auto {
+        column-count: 2;
+        @include mq() {
+            column-count: 1;
+        }
+
+        &list {
+            width: 98%;
+
+            column-count: 1;
+            page-break-inside: avoid;
+            break-inside: avoid;
+
+            & + & {
+                margin-top: 5rem;
+            }
+
+            &_title {
+                width: 100%;
+                margin-bottom: .8em;
+                padding: 0 0 0 .8em;
+                font-size: 2.4rem;
+                font-weight: $font-weight-bold;
+                background-color: $table-color-main;
+
+                @include mq() {
+                    font-size: $font-size-title-sub-sp;
+                }
+            }
+
+            &_text {
+                margin: 0px;
+                padding-left: 10px;
+                font-size: 22px;
+                line-height: 2;
+
+                @include mq() {
+                    padding: .25em 10px;
+                    font-size: $font-size-title-sub-sp;
+                }
+
+                &::before {
+                    width: 20px;
+                    height: 20px;
+                    padding-right: 20px;
+                    color: #b59159;
+
+                    @include fontAwesomeFree('\f0d7');
+                }
+            }
+
+            &_link {
+                font-weight: 500;
+                text-decoration: none;
+                color: #000;
+            }
+        }
+    }
+
+    &_menuback {
+        display: block;
+        width: $table-width;
+        margin: 2em auto 4em;
+        font-size: 1.6rem;
+        text-align: right;
+        text-decoration: underline;
+        color: #aa9382;
+
+        @include mq() {
+            width: 100%;
+        }
+    }
+
+    //WordPressブロックエディタ用
+    &_catalog {
+        max-width: 1022px;
+        margin: auto;
+        margin-top: $margin-section / 2;
+
+        * {
+            max-width: 860px;
+            margin-right: auto;
+            margin-left: auto;
+            font-style: normal;
+        }
+
+        h3 {
+            @extend %h3;
+            @include mq() {
+                width: 100vw;
+                margin-bottom: 1.5em;
+                margin-left: calc(50% - 50vw);
+                font-size: $font-size-title-sp;
+            }
+        }
+
+        h4 {
+            @extend %h4;
+            @include mq() {
+                width: 100vw;
+                margin-left: calc(50% - 50vw);
+                font-size: $font-size-title-sp;
+            }
+        }
+
+        h5 {
+            @extend %h5;
+            @include mq() {
+                width: 100%;
+                margin-bottom: 1em;
+                font-size: $font-size-title-sub-sp;
+                text-align: center;
+                background: none;
+            }
+
+            strong {
+                background-color: $background-color-white;
+            }
+        }
+
+        h6 {
+            @extend %h6;
+            @include mq() {
+                width: 98vw;
+                margin-left: calc(50% - 49vw);
+                font-size: $font-size-title-sub-sp;
+            }
+        }
+
+        p {
+            @extend %p;
+        }
+
+        .wp-block-table {
+            @extend %table;
+
+            & + p {
+                @extend %table_p;
+            }
+        }
+
+        //見出し付きテーブル（一括払い・分割払い）
+        h6 + .wp-block-table {
+            @extend %h6_table;
+        }
+
+        //見出しなしテーブル（横一列で回数表示）
+        h4 + .wp-block-table {
+            @extend %h5_table;
+        }
+
+        h5 + .wp-block-table {
+            @extend %h5_table;
+        }
+
+        p.has-text-align-center + .wp-block-table {
+            margin-top: $margin-section / 2;
+
+            @extend %h5_table;
+        }
+    }
+}
+
+.wp-block-table {
+    &.coupon {
+        @include mq() {
+            table {
+                border: 0;
+            }
+
+            thead {
+                display: none;
+            }
+
+            tbody {
+                display: block;
+
+                tr {
+                    display: block;
+                }
+
+                th {
+                    display: block;
+                    width: 100% !important;
+                }
+
+                td {
+                    display: block;
+                    border-top: 0;
+                    border-right: 0;
+                    border-left: 0;
+
+                    &::after {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        display: flex;
+                        align-items: center;
+                        width: 20%;
+                        height: 100%;
+                        font-size: .8em;
+                        font-weight: normal;
+                        content: attr(data-th);
+                        text-align: center;
+                        background-color: #f7f2ea;
+                    }
+
+                    &.num {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+
+        &.inject {
+            @include mq() {
+                td {
+                    display: block;
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+
+    thead tr:first-child {
+        th, td {
+            &:not(:empty) {
+                &::after {
+                    // font-size: .75em;
+                    // content: '（税込）';
+                    .price & {
+                        font-size: .75em;
+                        content: '（税込）';
+                    }
+                }
+            }
+        }
+    }
+}
+
+.payment {
+    tr:first-child {
+        th, td {
+            &:not(:empty) {
+                &::after {
+                    font-size: .75em;
+                    content: '（税込）';
+                }
+            }
+        }
+    }
+}
+
+.coupon, .planing {
+    tbody tr:first-child {
+        th, td {
+            &::after {
+                content: '' !important;
+            }
+        }
+    }
+}
+
+.planing {
+    td:nth-child(2) {
+        font-size: 2rem !important;
+        font-weight: normal !important;
+        background-color: #f3ede4 !important;
+
+        &::before {
+            content: '' !important;
+        }
+    }
+}
+
+
+.nowrap {
+    th {
+        white-space: nowrap;
+    }
+}

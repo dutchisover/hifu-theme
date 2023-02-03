@@ -1,0 +1,17 @@
+@charset 'utf-8';
+
+//設定ファイル（変数）
+@import 'setting/config';
+@import 'setting/function';
+
+//関数ファイル（MIXINなど）
+@import 'setting/menu-config';
+
+//エディタ用
+html {
+    font-size: 10px;
+}
+
+body {
+    @import 'page/style';
+}

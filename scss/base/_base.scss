@@ -1,0 +1,144 @@
+/* CSS Document */
+@charset 'utf-8';
+
+/*Googleフォントを読み込む*/
+//@import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+
+*, *:before, *:after {
+    /*    これは指定しておくと便利　https://saruwakakun.com/html-css/reference/box-sizing*/
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+
+    @include mq(lg) {
+        font-size: calc(8px + .5vw);
+    }
+    @include mq(md) {
+        font-size: 2.4vw;
+    }
+}
+
+body {
+    font-family: $font-family-gothic;
+    font-size: $font-size-default;
+    font-weight: 500;
+    line-height: $line-height-default;
+    color: #333;
+    border-top: 7px solid $border-color-red;
+    background-color: $background-color-white;
+
+    -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+    @include mq(lg) {
+        border-top: 0;
+    }
+}
+
+/*リンクテキストの全体設定*/
+a {
+    transition: opacity .3s;
+    text-decoration: none;
+    //color: #1ca9e3;
+
+    &:hover {
+        opacity: .5;
+    }
+}
+
+/*画像全てに当てるCSS*/
+img, video, object {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+    border: none;
+}
+
+strong {
+    font-weight: $font-weight-bold;
+    color: $color-khaki;
+}
+
+mark {
+    font-weight: inherit;
+    font-style: inherit;
+}
+
+/*ラッパー*/
+.wrapper {
+    width: 90%;
+    max-width: $width_base;
+    margin-top: $margin-section;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.wrapper-min {
+    width: 90%;
+    max-width: 960px;
+    margin-top: $margin-section;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*全セクション共通*/
+.section_title {
+    padding-bottom: 1.5em;
+    font-family: $font-family-mincho;
+    font-size: $font-size-title;
+    font-weight: $font-weight-bold;
+    line-height: 1.4;
+    text-align: center;
+    color: $color-khaki;
+
+    @include mq() {
+        font-size: $font-size-title-sp;
+    }
+}
+
+.section_title-sub {
+    padding: 0 0 0 .5em;
+    font-family: $font-family-mincho;
+    font-size: $font-size-title-sub;
+    font-weight: $font-weight-bold;
+    line-height: 1.75;
+    color: $color-khaki;
+    border-left: 4px solid $background-color-beige;
+}
+
+.font-strong {
+    font-weight: $font-weight-bold;
+    color: $border-color-red;
+}
+
+.font-small {
+    font-size: .6em;
+}
+
+
+.pc_none {
+    @include mq(pc_none) {
+        display: none !important;
+    }
+}
+
+.sp_none {
+    @include mq(lg) {
+        display: none !important;
+    }
+}
+
+
+#public #wpadminbar {
+    background-color: #ac4343;
+}
+
+.post-password-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 300px;
+}

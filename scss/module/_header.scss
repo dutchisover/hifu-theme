@@ -1,0 +1,65 @@
+.header {
+    position: relative;
+    margin-top: 0;
+    &_inner {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    &_link {
+        max-width: 157px;
+        padding: 1rem 0;
+
+        @include mq(lg) {
+            width: 30%;
+        }
+    }
+    &_title {
+        margin-left: 1rem;
+        font-size: $font-size-small;
+        font-weight: normal;
+        line-height: 1.4;
+        color: $color-grey;
+
+        @include mq(lg) {
+            overflow: hidden;
+            width: 0;
+            white-space: nowrap;
+        }
+    }
+}
+
+//パンくずリスト
+.breadcrumbs {
+    margin-top: 0;
+    padding: 1em 0;
+    font-size: 1.3rem;
+    color: $color-grey;
+    &_list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        list-style: none;
+    }
+    &_item {
+        margin-right: .75em;
+        & + &::before {
+            display: inline-block;
+            width: .5em;
+            height: .5em;
+            margin-right: .75em;
+            content: '';
+            transform: rotate(-45deg);
+            border: 1px solid;
+            border-top: 0;
+            border-left: 0;
+        }
+    }
+    &_link {
+        color: inherit;
+        &:hover {
+            text-decoration: underline;
+            opacity: .7;
+        }
+    }
+}

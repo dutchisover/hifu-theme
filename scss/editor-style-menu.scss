@@ -1,0 +1,107 @@
+@charset 'utf-8';
+
+//設定ファイル（変数）
+@import 'setting/config';
+@import 'setting/function';
+
+//関数ファイル（MIXINなど）
+@import 'setting/menu-config';
+
+//エディタ用
+html {
+    font-size: 10px !important;
+}
+
+body {
+    //ポイントブロック
+    @extend %wp-block-media-text;
+
+    .wp-block-media-text {
+        width: auto;
+        margin-left: 0;
+    }
+
+    .block-editor-inner-blocks {
+        font-family: sans-serif;
+
+        @extend %menu-wp-edit;
+    }
+
+    .wp-block {
+        max-width: none;
+    }
+
+    .h3_post {
+        @extend %h3_post;
+    }
+
+    .menu_page {
+        //治療の流れ
+        &_tutorial {
+            width: auto;
+            margin-left: 0;
+
+            @extend %menu_tutorial;
+
+            .wp-block {
+                flex: 0 !important;
+                flex-basis: unset !important;
+                flex-grow: unset !important;
+            }
+
+            .wp-block-columns {
+                width: auto;
+            }
+
+            .wp-block-column {
+                width: 100%;
+            }
+        }
+
+        //料金表
+        &_price {
+            width: auto;
+            margin-left: 0;
+
+            @extend %menu_price;
+        }
+
+        // 施術について
+        &_how {
+            @extend %menu_how;
+        }
+
+        // ダウンタイムについて
+        &_downtime {
+            @extend %menu_downtime;
+        }
+
+        //よくあるご質問
+        &_faq {
+            width: auto;
+            margin-left: 0;
+
+            @extend %menu_faq;
+        }
+
+        //追加説明コンテンツ
+        &_add {
+            width: auto;
+            margin-left: 0;
+
+            @extend %menu_add;
+        }
+    }
+
+    .bf {
+        @extend %menu_bf;
+    }
+
+    //CVボタン
+    .wp-block-buttons {
+        width: auto;
+        margin-left: 0;
+
+        @extend %menu_button;
+    }
+}
