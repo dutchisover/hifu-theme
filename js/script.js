@@ -105,7 +105,7 @@
     const td_eq = td.eq(i);
     const td_text = td_eq.text();
     console.log(td_text);
-    if (td_text.match(/本$/)) {
+    if (td_text.match(/本$/) || td_text.match(/cc$/) || td_text.match(/個/)) {
       td_eq.addClass('num');
     }
     const em_text = td_eq.children('em').text();

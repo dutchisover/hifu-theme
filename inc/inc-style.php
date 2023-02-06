@@ -7,7 +7,7 @@
         justify-content: center;
         width: 100vw;
         height: 100vh;
-        transition: 0.4s 0.1s;
+        transition: 1s 0.2s;
         background-color: #fff;
     }
 

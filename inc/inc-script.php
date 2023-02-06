@@ -15,22 +15,23 @@ if (is_front_page()) { //トップページ専用読み込み
 
 			$(window).on("load", function() {
 				$('.top_slick').addClass("load");
-			});
-			$('.slick_list').slick({
-				dots: true,
-				infinite: true,
-				speed: 1500,
-				fade: true,
-				cssEase: 'ease-out',
-				autoplay: true,
-				autoplaySpeed: 5000,
-				arrows: true,
-				adaptiveHeight: true,
-				focusOnSelect: true,
-				pauseOnFocus: true,
-				pauseOnHover: true,
-				pauseOnDotsHover: true,
-				lazyLoad: 'progressive',
+
+				$('.slick_list').slick({
+					dots: true,
+					infinite: true,
+					speed: 1500,
+					fade: true,
+					cssEase: 'ease-out',
+					autoplay: true,
+					autoplaySpeed: 6000,
+					arrows: true,
+					adaptiveHeight: true,
+					focusOnSelect: true,
+					pauseOnFocus: true,
+					pauseOnHover: true,
+					pauseOnDotsHover: true,
+					lazyLoad: 'progressive',
+				});
 			});
 
 			$(".top_news_container").slick({
@@ -87,7 +88,7 @@ if (is_front_page()) { //トップページ専用読み込み
 if (is_page()) {
 ?>
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 <?php } ?>
 
